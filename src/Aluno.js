@@ -103,6 +103,7 @@ export default class Aluno extends React.Component {
          <Editar 
             dadosPessoa={this.props.dadosPessoa} 
             fetchdadosPessoaisCallback={this.props.fetchdadosPessoaisCallback}
+            switchEdit={this.switchEdit}
             /> : null}
       </div>
     );

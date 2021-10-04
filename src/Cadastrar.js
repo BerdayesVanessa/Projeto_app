@@ -56,7 +56,7 @@ export default class Cadastrar extends React.Component {
                 <div class="form-group">
                   <label for="name">Nome completo</label>
                   <input
-                    type="name"
+                    type="nome"
                     value={this.state.nome}
                     onChange={this.handleChange}
                     class="form-control"

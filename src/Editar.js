@@ -12,16 +12,38 @@ export default class Editar extends React.Component {
     };
 
     this.updateNome = this.updateNome.bind(this);
+    this.update = this.update.bind(this);
   }
 
   updateNome(event) {
     this.setState({ nome: event.target.value });
   }
 
+  update(event) {
+    const { id } = this.props.dadosPessoa;
+    const { nome, cpf } = this.state;
+
+    const updateddadosPessoa = {
+      nome: nome,
+      cpf: cpf
+    };
+
+    const url = `http://localhost:3001/dadosPessoais/${id}`;
+    fetch(url, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(updateddadosPessoa)
+    });
+
+    this.props.fetchdadosPessoaisCallback();
+    this.props.switchEdit();
+  }
+
   render() {
     return (
       <div>
-        opa
         <legend>Dados pessoais</legend>
         <div class="row">
           <div class="col-6">
@@ -427,7 +449,11 @@ export default class Editar extends React.Component {
         <div class="col-12">
           <div class="form-group text-sm-center">
             <div class="container">
-              <button onClick={this.save} type="button" class="btn btn-primary">
+              <button
+                onClick={this.update}
+                type="button"
+                class="btn btn-primary"
+              >
                 Atualizar
               </button>
             </div>
