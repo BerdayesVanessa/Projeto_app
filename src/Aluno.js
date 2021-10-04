@@ -1,11 +1,17 @@
 import React from "react";
+import Editar from "./Editar";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default class Aluno extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      editing: false
+    };
+
     this.delete = this.delete.bind(this);
+    this.switchEdit = this.switchEdit.bind(this);
   }
 
   delete() {
@@ -17,6 +23,10 @@ export default class Aluno extends React.Component {
     });
 
     this.props.fetchdadosPessoaisCallback();
+  }
+
+  switchEdit() {
+    this.setState({ editing: !this.state.editing });
   }
 
   render() {
@@ -67,7 +77,11 @@ export default class Aluno extends React.Component {
                   <td>{email}</td>
                   <td>{escolaridade}</td>
                   <td>
-                    <button type="button" class="btn btn-success">
+                    <button
+                      onClick={this.switchEdit}
+                      type="button"
+                      class="btn btn-success"
+                    >
                       Editar
                     </button>
                   </td>
@@ -85,6 +99,11 @@ export default class Aluno extends React.Component {
             </table>
           </div>
         </div>
+        {this.state.editing ? 
+         <Editar 
+            dadosPessoa={this.props.dadosPessoa} 
+            fetchdadosPessoaisCallback={this.props.fetchdadosPessoaisCallback}
+            /> : null}
       </div>
     );
   }
