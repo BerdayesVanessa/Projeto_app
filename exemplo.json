@@ -1,0 +1,60 @@
+{
+  "dadosPessoais": [
+    {
+      "id": 1,
+      "nome": "John Doe",
+      "rg": "13.785.431-7",
+      "cpf": "856.946.731-46",
+      "nascimento": "11/11/1986",
+      "pais": "Venezuela",
+      "genero": "feminino",
+      "deficiencia": "não",
+      "email": "john@doe.email",
+      "telefone": "1111-1111",
+      "cep": "13275-140",
+      "logradouro": "Avenida A",
+      "numero": "122",
+      "complemento": "casa 20",
+      "bairro": "Jardim Bom Retiro",
+      "localidade": "Valinhos",
+      "uf": "São Paulo",
+      "escolaridade": "Superior"
+    },
+    {
+      "id": 2,
+      "nome": "Vanessa",
+      "rg": "13.785.431-7",
+      "cpf": "703.884.567-76",
+      "nascimento": "11/11/1986",
+      "pais": "Venezuela",
+      "genero": "feminino",
+      "deficiencia": "não",
+      "email": "vane@doe.email",
+      "telefone": "1111-1111",
+      "cep": "13275-140",
+      "logradouro": "Avenida A",
+      "numero": "122",
+      "complemento": "casa 20",
+      "bairro": "Jardim Bom Retiro",
+      "localidade": "Itu",
+      "uf": "São Paulo",
+      "escolaridade": "Superior"
+    },
+    {
+      "nome": "gilberto",
+      "id": 3
+    },
+    {
+      "nome": "vanessa",
+      "id": 5
+    }
+  ],
+  "dadosProfissionais": [
+    {
+      "id": 1,
+      "escolaridade": "Superior",
+      "curso": "Administração",
+      "imagem": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg"
+    }
+  ]
+}
